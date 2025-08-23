@@ -1,0 +1,27 @@
+.footer {
+    gap: 5rem;
+    display: flex;
+    padding: 2rem 5rem;
+    align-items: center;
+    background-color: #7F8661;
+}
+
+.logo-footer {
+    width: 15rem;
+}
+
+.footer-info-container {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-info-container h1, p {
+    color: white;
+}
+
+.footer-link {
+    cursor: pointer;
+    border-bottom: 0.15rem solid white;
+}

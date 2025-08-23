@@ -12,6 +12,14 @@ h1 {
   font-family: "Merriweather", serif;
 }
 
-p {
+p, li, button {
   font-family: "Inter", sans-serif;
+}
+
+button {
+  border: none;
+}
+
+li {
+  list-style: none;
 }
