@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import NavBar from '../../components/NavBar/NavBar'
 import Footer from '../../components/Footer/Footer'
+import HomeBanner from '../../components/HomeBanner/HomeBanner'
 
 const Home = () => {
   return (
@@ -10,9 +11,9 @@ const Home = () => {
         <header className='header-home-page'>
             <NavBar/>
         </header>
-
+            
         <main>
-            MAIN
+            <HomeBanner/>
         </main>
 
         <footer className='footer-home-page'>

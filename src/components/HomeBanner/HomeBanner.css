@@ -1,0 +1,85 @@
+.home-banner-container {
+    width: 100vw;
+    height: 88vh;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+
+.home-banner-left-container {
+    flex: 2;
+    display: flex;
+    margin-left: 10rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.home-banner-right-container {
+    flex: 1.5;
+    width: 100%;
+    height: 100%;
+    background-color: #BB1732;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.home-banner-left-container h1 {
+    color: #BB1732;
+    font-size: 3.8rem;
+    font-weight: bold;
+    white-space: pre-line;     
+    word-break: break-word; 
+}
+
+.home-banner-description {
+    width: 60%;
+    color: black;
+    font-size: medium;
+    margin-bottom: 1rem;
+}
+
+.home-banner-info-cards-container {
+    gap: 2rem;
+    display: flex;
+}
+
+.strawberry-banner-image {
+    top: 22%;
+    left: 47%;
+    width: 25rem;
+    position: absolute;
+}
+
+.home-banner-right-container h1 {
+    height: 100%;
+    font-size: 10rem;
+    color: #CF5C6F;
+    margin-right: -1.5rem;
+    writing-mode: sideways-lr; 
+    text-orientation: upright;
+}
+
+.default-button-icon {
+    gap: 0.5rem;
+    display: flex;
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-right: 0rem;
+    align-items: center;
+    padding-bottom: 0.2rem;
+}
+
+.default-button-icon div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.5rem;
+    border-radius: 2rem;
+    background-color: #C9455B;
+}
+
+.default-button-icon img {
+    width: 1.5rem;
+}
