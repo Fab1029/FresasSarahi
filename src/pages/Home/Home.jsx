@@ -4,6 +4,7 @@ import NavBar from '../../components/NavBar/NavBar'
 import Footer from '../../components/Footer/Footer'
 import HomeBanner from '../../components/HomeBanner/HomeBanner'
 import ContactUsBanner from '../../components/ContactUsBanner/ContactUsBanner'
+import InformationBanner from '../../components/InformationBanner/InformationBanner'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
             
         <main>
             <HomeBanner/>
+            <InformationBanner/>
             <ContactUsBanner/>
         </main>
 
