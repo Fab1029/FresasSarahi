@@ -1,29 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Home.css'
 import NavBar from '../../components/NavBar/NavBar'
 import Footer from '../../components/Footer/Footer'
 import HomeBanner from '../../components/HomeBanner/HomeBanner'
 import ContactUsBanner from '../../components/ContactUsBanner/ContactUsBanner'
 import InformationBanner from '../../components/InformationBanner/InformationBanner'
+import Product from '../../components/Product/Product'
+import {getProducts} from '../../services/Products.js'
 
 const Home = () => {
+  const [products, setProducts] = useState(null);
+
+  useEffect(() => {
+    const fetchProducts = () => {
+      const data = getProducts();
+      const shuffled = [...data].sort(() => 0.5 - Math.random());
+      setProducts(shuffled.slice(0, 5)); 
+    };
+
+    fetchProducts();
+  
+  }, []); 
+
   return (
     <div style={{overflow: 'hidden'}}>
-
-        <header className='header-home-page'>
+      {products ? (
+        <>
+          <header className='header-home-page'>
             <NavBar/>
-        </header>
-            
-        <main>
+          </header>
+              
+          <main>
             <HomeBanner/>
             <InformationBanner/>
             <ContactUsBanner/>
-        </main>
 
-        <footer className='footer-home-page'>
+            <Product product={products[0]}/>
+          </main>
+
+          <footer className='footer-home-page'>
             <Footer/>
-        </footer>
-
+          </footer>
+        </>
+      )
+      :
+        <></>
+      }
     </div>
   )
 }

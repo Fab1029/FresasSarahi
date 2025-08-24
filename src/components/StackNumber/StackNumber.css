@@ -1,0 +1,20 @@
+.stack-number-container {
+    gap: 0.5rem;
+    display: flex;
+    border-radius: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #F5F5F5;
+}
+
+.stack-number-container img {
+    width: 1.5rem;
+    cursor: pointer;
+    object-fit: cover;
+}
+
+.stack-number-container p {
+    color: black;
+    padding: 0.2rem 0.5rem;
+    background-color: white;
+}
