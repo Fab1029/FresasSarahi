@@ -2,7 +2,7 @@ import CardBenefits from '../CardBenefits/CardBenefits'
 import VideoPlayer from '../VideoPlayer/VideoPlayer'
 import './InformationBanner.css'
 
-import video from '../../assets/Videos/strawberryField.webm'
+import video from '../../assets/Videos/strawberryField.mp4'
 import detail1 from '../../assets/CardBenefits/detail1.webp'
 import detail2 from '../../assets/CardBenefits/detail2.webp'
 import detail3 from '../../assets/CardBenefits/detail3.webp'
