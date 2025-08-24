@@ -3,6 +3,7 @@ import './Home.css'
 import NavBar from '../../components/NavBar/NavBar'
 import Footer from '../../components/Footer/Footer'
 import HomeBanner from '../../components/HomeBanner/HomeBanner'
+import ContactUsBanner from '../../components/ContactUsBanner/ContactUsBanner'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
             
         <main>
             <HomeBanner/>
+            <ContactUsBanner/>
         </main>
 
         <footer className='footer-home-page'>

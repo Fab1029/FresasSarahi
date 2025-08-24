@@ -1,0 +1,60 @@
+.contact-us-banner {
+    margin: 4rem;
+    padding: 0.5rem;
+    
+    display: flex;
+    background-color: #BFC3B0;
+    justify-content: space-between;
+}
+
+.contact-us-left-container {
+    height: 20rem;
+    object-fit: cover;
+}
+
+.contact-us-right-container {
+    height: 12rem;
+    object-fit: cover;
+    align-self: flex-end;
+}
+
+.contact-us-center-container {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;   
+}
+
+.contact-us-center-container h2 {
+    color: #7F8661;
+    font-weight: 500;
+    font-size: xx-large;
+}
+
+.contact-us-center-container h1 {
+    font-size: 4rem;
+    color: #5E6839;
+    text-align: center;
+    white-space: pre-line;     
+    word-break: break-word; 
+}
+
+.contact-us-center-container button {
+    padding: 1rem;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    
+    cursor: pointer;
+    background-color: #7F8661;
+    font-family: 'Merriweather', serif;
+
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-us-center-container img {
+    width: 2rem;
+}
