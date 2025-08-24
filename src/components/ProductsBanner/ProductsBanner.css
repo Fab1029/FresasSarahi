@@ -1,0 +1,12 @@
+.products-banner {
+    gap: 2rem;
+    display: grid;
+    padding: 1rem 5rem;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.see-more-container {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+}

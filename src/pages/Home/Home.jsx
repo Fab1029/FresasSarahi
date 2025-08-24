@@ -7,6 +7,7 @@ import ContactUsBanner from '../../components/ContactUsBanner/ContactUsBanner'
 import InformationBanner from '../../components/InformationBanner/InformationBanner'
 import Product from '../../components/Product/Product'
 import {getProducts} from '../../services/Products.js'
+import ProductsBanner from '../../components/ProductsBanner/ProductsBanner.jsx'
 
 const Home = () => {
   const [products, setProducts] = useState(null);
@@ -15,7 +16,7 @@ const Home = () => {
     const fetchProducts = () => {
       const data = getProducts();
       const shuffled = [...data].sort(() => 0.5 - Math.random());
-      setProducts(shuffled.slice(0, 5)); 
+      setProducts(shuffled.slice(0, 8)); 
     };
 
     fetchProducts();
@@ -33,9 +34,8 @@ const Home = () => {
           <main>
             <HomeBanner/>
             <InformationBanner/>
+            <ProductsBanner products={products}/> 
             <ContactUsBanner/>
-
-            <Product product={products[0]}/>
           </main>
 
           <footer className='footer-home-page'>
