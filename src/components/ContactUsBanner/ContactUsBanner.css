@@ -1,7 +1,7 @@
 .contact-us-banner {
-    margin: 4rem;
     padding: 0.5rem;
-
+    margin: 2rem 4rem;
+    
     display: flex;
     background-color: #BFC3B0;
     justify-content: space-between;

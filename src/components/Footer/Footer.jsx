@@ -7,22 +7,30 @@ const Footer = () => {
 
   return (
     <div className='footer'>
-        <img src={logo} alt='logo' className='logo-footer' loading='lazy'/>
+        <div className='left-footer-container'>
+          <img src={logo} alt='logo' className='logo-footer' loading='lazy'/>
+        </div>      
+        
 
-        <div className='footer-info-container'>
+        <div className='center-footer-container'>
+          <div className='footer-info-container'>
             <h1>Categorías</h1>
             <p className='footer-link' onClick={() => navigate('/')}>Inicio</p>
             <p className='footer-link'>Tienda</p>
             <p className='footer-link'>Acerca de nosotros</p>
+          </div>
+
+          <div className='footer-info-container'>
+              <h1>Contacto</h1>
+              <p>fresasSarahi@gmail.com</p>
+              <p>+593 0998956672</p>
+              <p>Nabón, Azuay, Ecuador</p>
+          </div>
 
         </div>
 
-        <div className='footer-info-container'>
-            <h1>Contacto</h1>
-            <p>fresasSarahi@gmail.com</p>
-            <p>+593 0998956672</p>
-            <p>Nabón, Azuay, Ecuador</p>
-        </div>
+        <div className='right-footer-container'/>
+        
 
     </div>
   )
