@@ -13,9 +13,9 @@ const Footer = () => {
         <div className='left-footer-container'>
           <img src={logo} alt='logo' className='logo-footer' loading='lazy'/>
           <div className='social-media-icons-container'>
-            <img src={facebookIcon} alt='facebook-icon' loading='lazzy' style={{width: '2.5rem'}}/>
-            <img src={instagramIcon} alt='instagram-icon' loading='lazzy' style={{width: '2rem'}}/>
-            <img src={whatsappIcon} alt='whatsapp-icon' loading='lazzy' style={{width: '2rem'}}/>
+            <img src={facebookIcon} alt='facebook-icon' loading='lazzy' className='social-icon facebook-icon'/>
+            <img src={instagramIcon} alt='instagram-icon' loading='lazzy' className='social-icon'/>
+            <img src={whatsappIcon} alt='whatsapp-icon' loading='lazzy' className='social-icon'/>
           </div>
         </div>      
         
