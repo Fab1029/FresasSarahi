@@ -11,7 +11,7 @@
 }
 
 .card-information img {
-    width: 5rem;
+    width: 6rem;
 }
 
 .card-information p {
@@ -21,4 +21,20 @@
     text-align: center;        
     white-space: pre-line;     
     word-break: break-word;    
+}
+
+@media (max-width:1124px) {
+    .card-information {
+        width: 8rem;
+    }
+}
+
+@media (max-width:1000px) {
+    .card-information img {
+        width: 4rem;
+    }
+
+    .card-information p { 
+        font-size: medium;
+    }
 }

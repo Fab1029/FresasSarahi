@@ -1,5 +1,8 @@
 import './Footer.css'
 import logo from '../../assets/Footer/Logo.webp'
+import facebookIcon from '../../assets/Footer/facebookIcon.webp'
+import instagramIcon from '../../assets/Footer/instagramIcon.webp'
+import whatsappIcon from '../../assets/Footer/whatsappIcon.webp'
 import { useNavigate } from 'react-router-dom'
 
 const Footer = () => {
@@ -9,6 +12,11 @@ const Footer = () => {
     <div className='footer'>
         <div className='left-footer-container'>
           <img src={logo} alt='logo' className='logo-footer' loading='lazy'/>
+          <div className='social-media-icons-container'>
+            <img src={facebookIcon} alt='facebook-icon' loading='lazzy' style={{width: '2.5rem'}}/>
+            <img src={instagramIcon} alt='instagram-icon' loading='lazzy' style={{width: '2rem'}}/>
+            <img src={whatsappIcon} alt='whatsapp-icon' loading='lazzy' style={{width: '2rem'}}/>
+          </div>
         </div>      
         
 

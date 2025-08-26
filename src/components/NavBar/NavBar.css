@@ -31,12 +31,14 @@
     cursor: pointer;
     font-size: small;
     font-weight: bold;
+    text-align: center;
 }
 
 .default-button {
     color: white;
     padding: 1rem;
     cursor: pointer;
+    font-size: small;
     font-weight: bold;
     border-radius: 2rem;
     background-color: #BB1732;   
@@ -44,4 +46,55 @@
 
 .menu-nav-bar-item.active {
     color: #BB1732
+}
+
+@media (max-width:1000px) {
+    .logo-nav-bar { 
+        width: 8rem;
+    }
+
+    .menu {
+        gap: 5rem;
+    }
+}
+
+@media (max-width:850px) {
+    .menu {
+        gap: 3rem;
+    }
+}
+
+@media (max-width:750px) {
+    .menu {
+        gap: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width:550px) {
+    .menu {
+        gap: 1rem;
+        
+    }
+}
+
+@media (max-width:450px) {
+    .navbar {
+        gap: 0.2rem;
+        padding: 0.3rem;
+    }
+
+    .logo-nav-bar { 
+        width: 6rem;
+    }
+
+    .menu li {
+        font-size: 0.5rem;
+    }
+
+    .default-button {
+        padding: 0.5rem;
+        font-size: 0.5rem;
+    }
+    
 }
