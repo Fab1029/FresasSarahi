@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './NavBar.css'
 import logo from '../../assets/NavBar/Logo.webp'
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -13,7 +13,7 @@ const NavBar = () => {
     if (!navRef) return; 
 
     const handleScroll = () => {
-      if (window.scrollY > window.innerHeight) { 
+      if (window.scrollY > window.innerHeight * 0.25) { 
         setNavBackground("white"); 
       } else {
         setNavBackground("transparent"); 
