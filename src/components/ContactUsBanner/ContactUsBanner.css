@@ -1,23 +1,30 @@
 .contact-us-banner {
+    position: relative;           
     padding: 0.5rem;
     margin: 2rem 4rem;
     
     display: flex;
+    align-items: center;
+    justify-content: center;       
     background-color: #BFC3B0;
-    justify-content: space-between;
+    overflow: hidden;             
 }
 
 .contact-us-left-container {
     height: 20rem;
-    margin: auto 0;
     object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .contact-us-right-container {
     height: 12rem;
-    margin: auto 0;
     object-fit: cover;
-    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .contact-us-center-container {
@@ -25,7 +32,9 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-around;   
+    justify-content: center;   
+    text-align: center;
+    z-index: 2;             
 }
 
 .contact-us-center-container h2 {
@@ -55,12 +64,20 @@
     gap: 1rem;
     display: flex;
     align-items: center;
+    border: none;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.contact-us-center-container button:hover {
+    background-color: #5E6839;
 }
 
 .contact-us-center-container img {
     width: 2rem;
 }
 
+/* RESPONSIVE */
 @media (max-width:1100px) {
     .contact-us-center-container h2 {
         font-size: 2rem;
