@@ -36,7 +36,7 @@
 
 @media (max-width:550px) {
     .information-banner-container {
-        height: 45vh;
+        height: 50vh;
         flex-direction: column;
         background-color: transparent;
     }

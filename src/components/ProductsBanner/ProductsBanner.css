@@ -1,5 +1,5 @@
 .products-banner {
-    gap: 2rem;
+    gap: 5rem;
     display: grid;
     padding: 1rem 5rem;
     grid-template-columns: repeat(4, 1fr);
@@ -9,4 +9,21 @@
     display: flex;
     margin-top: 2rem;
     justify-content: center;
+}
+
+@media (max-width:850px) {
+    .products-banner {
+        gap: 0.5rem;
+        row-gap: 2rem;
+        padding: 0.5rem 1rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .button-see-more {
+        font-size: 0.6rem;
+    }
+
+    .button-see-more img {
+        width: 1rem;
+    }
 }

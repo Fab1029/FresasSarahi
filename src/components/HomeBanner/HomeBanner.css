@@ -224,6 +224,7 @@
     .home-banner-container {
         gap: 0.5rem;
         height: 35vh;
+        margin-top: 4rem;
     }
 
     .home-banner-left-container h1 {
@@ -241,6 +242,10 @@
 
     .home-banner-right-container h1 { 
         font-size: 9vh;
+    }
+
+    .home-banner-left-container {
+        justify-content: end;
     }
 }
 
