@@ -1,0 +1,34 @@
+.shop-banner-container {
+    width: 100vw;
+    height: 70vh;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.shop-banner-container img {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+    position: absolute;
+}
+
+.shop-banner-info-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.shop-banner-info-container h1 {
+    color: white;
+    font-size: 8rem;
+}
+
+.shop-banner-info-container p {
+    width: 40%;
+    text-align: left;
+    font-size: large;
+}
+

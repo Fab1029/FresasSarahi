@@ -36,8 +36,8 @@ const NavBar = () => {
         
         <ul className='menu'>
             <li key='Inicio' className={`menu-nav-bar-item ${isActive('/')}`} onClick={() => navigate('/')}>Inicio</li>
-            <li key='Tienda' className={`menu-nav-bar-item ${isActive('shop')}`}>Tienda</li>
-            <li key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('about-us')}`}>Acerca de nosotros</li>
+            <li key='Tienda' className={`menu-nav-bar-item ${isActive('/shop')}`} onClick={() => navigate('/shop')}>Tienda</li>
+            <li key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('/about-us')}`}>Acerca de nosotros</li>
         </ul>
 
         <button className='default-button'>

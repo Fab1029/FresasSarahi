@@ -4,6 +4,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'General',
     },
 
     {
@@ -11,6 +12,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'General',
     },
 
     {
@@ -18,6 +20,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'General',
     },
 
     {
@@ -25,6 +28,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'Especial',
     },
 
     {
@@ -32,6 +36,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'Especial',
     },
 
     {
@@ -39,6 +44,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'Especial',
     },
 
     {
@@ -46,6 +52,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'Especial',
     },
 
     {
@@ -53,6 +60,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'Temporada',
     },
 
     {
@@ -60,6 +68,7 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'Temporada',
     },
 
     {
@@ -67,5 +76,6 @@ export const products = [
         price: '1.00',
         weight: '1 kg',
         image: `/mermelada.webp`,
+        type: 'Temporada',
     }
 ]

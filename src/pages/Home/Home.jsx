@@ -5,7 +5,6 @@ import Footer from '../../components/Footer/Footer'
 import HomeBanner from '../../components/HomeBanner/HomeBanner'
 import ContactUsBanner from '../../components/ContactUsBanner/ContactUsBanner'
 import InformationBanner from '../../components/InformationBanner/InformationBanner'
-import Product from '../../components/Product/Product'
 import {getProducts} from '../../services/Products.js'
 import ProductsBanner from '../../components/ProductsBanner/ProductsBanner.jsx'
 
