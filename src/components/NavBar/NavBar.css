@@ -66,19 +66,10 @@
 
 @media (max-width:750px) {
     .menu {
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 0.5rem 1rem;
     }
-}
 
-@media (max-width:550px) {
-    .menu {
-        gap: 1rem;
-        
-    }
-}
-
-@media (max-width:450px) {
     .navbar {
         gap: 0.2rem;
         padding: 0.3rem;

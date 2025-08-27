@@ -17,7 +17,7 @@
 }
 
 .home-banner-right-container {
-    flex: 1.5;
+    flex: 1;
     width: 100%;
     height: 100%;
     background-color: #BB1732;
@@ -28,14 +28,14 @@
 
 .home-banner-left-container h1 {
     color: #BB1732;
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: bold;
     white-space: pre-line;     
     word-break: break-word; 
 }
 
 .home-banner-description {
-    width: 60%;
+    width: 70%;
     color: black;
     font-size: large;
     text-align: left;
@@ -49,16 +49,16 @@
 
 .strawberry-banner-image {
     top: 18%;
-    left: 40%;
+    left: 50%;
     width: 50rem;
     position: absolute;
 }
 
 .home-banner-right-container h1 {
     height: 100%;
-    font-size: 14rem;
+    font-size: 24vh;
     color: #CF5C6F;
-    margin-right: -1.5rem;
+    margin-right: -2.5rem;
     writing-mode: sideways-lr; 
     text-orientation: upright;
 }
@@ -87,93 +87,160 @@
     width: 1.8rem;
 }
 
-@media (max-width:1500px) {
+@media (max-width:1800px) {
     .home-banner-left-container h1 {
-        font-size: 5rem;
+        font-size: 6rem;
     }
 
-    .strawberry-banner-image { 
-        width: 40rem;
+    .home-banner-left-container {
+        margin-left: 2rem;
+    }
+
+    .strawberry-banner-image {
+        left: 42%;
+    }
+}
+
+
+@media (max-width:1540px) {
+    .strawberry-banner-image {
+        left: 40%;
+    }
+}
+
+@media (max-width:1400px) {
+    .strawberry-banner-image {
+        left: 35%;
     }
 }
 
 @media (max-width:1300px) {
     .home-banner-left-container h1 {
-        font-size: 4rem;
+        font-size: 5rem;
     }
 
-    .strawberry-banner-image { 
+    .strawberry-banner-image {
+        left: 45%;
         width: 35rem;
     }
 }
 
-@media (max-width:1100px) {
+@media (max-width:1200px) {
+    .home-banner-container {
+        margin-top: 4rem;
+    }
+
+    .home-banner-left-container h1 {
+        font-size: 4rem;
+    }
+
+    .home-banner-container {
+        height: 70vh;
+    }
+
+    .home-banner-right-container h1 {
+        font-size: 18.5vh;
+    }
+
+    .strawberry-banner-image {
+        top: 20%;
+        left: 48%;
+        width: 25rem;
+    }
+
     .home-banner-left-container {
-        margin-left: 1rem;
+        gap: 1rem;
     }
 
     .home-banner-description {
         width: 70%;
-    }
-
-    .strawberry-banner-image { 
-        top: 28%;
-        left: 35%;
-        width: 30rem;
+        font-size: medium;
     }
 }
 
-@media (max-width:1000px) {
-    .home-banner-container {
-        height: 60vh;
+@media (max-width:900px) {
+    .home-banner-left-container {
+        flex: 2;
     }
 
     .home-banner-right-container {
-        flex: 1;
+        flex: 1.1;
     }
 
     .home-banner-left-container h1 {
         font-size: 3rem;
     }
 
-    .home-banner-description {
-        font-size: medium;
-    }
-
-    .home-banner-right-container h1 {
-        font-size: 9.5rem;
-    }
-
-    .strawberry-banner-image { 
-        top: 25%;
+    .strawberry-banner-image {
+        top: 22%;
         left: 48%;
-        width: 25rem;
-    }
+        width: 22rem;
+    }  
 }
 
+@media (max-width:900px) {
+    .strawberry-banner-image {
+        left: 40%;
+    }  
+}
 
-@media (max-width:500px) {
-    .home-banner-container {
-        margin-top: 6rem;
-    }
-
+@media (max-width:750px) {
     .home-banner-left-container h1 {
         font-size: 2rem;
     }
 
     .home-banner-info-cards-container {
-        width: 100%;
-        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
 
+@media (max-width:670px) {
+    .home-banner-container {
+        height: 40vh;
+        margin-top: 3rem;
+    }
+
+    .home-banner-left-container {
+        margin-left: 0.5rem;
     }
 
     .home-banner-right-container h1 {
-        font-size: 9rem;
-        margin-right: -2.5rem;
+        font-size: 10.5vh;
+        margin-right: -1rem;
     }
 
     .home-banner-description {
-        width: 100%;
-        font-size: medium;
+        display: none;
+    }
+    
+    .strawberry-banner-image {
+        top: 10%;
+        left: 40%;
+        width: 18rem;
+    }  
+}
+
+@media (max-width:550px) {
+    .home-banner-container {
+        gap: 0.5rem;
+        height: 35vh;
+    }
+
+    .home-banner-left-container h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .button-buy-now {
+        display: none;
+    }
+
+    .strawberry-banner-image { 
+        display: none;
+    }
+
+    .home-banner-right-container h1 { 
+        font-size: 9vh;
     }
 }
+

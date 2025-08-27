@@ -19,7 +19,7 @@ const HomeBanner = () => {
                     Fresas Sarahí es un puente entre el agricultor y tu mesa, que ofrece productos frescos, saludables y auténticos. Cada fresa cuenta una historia de cuidado, dedicación y pasión por el campo, llevando sabores únicos a quienes valoran la calidad y la sostenibilidad.
                 </p>
 
-                <button className="default-button default-button-icon">
+                <button className="default-button default-button-icon button-buy-now">
                     Comprar ahora
                     <div>
                         <img src={rightArrowIcon}/>

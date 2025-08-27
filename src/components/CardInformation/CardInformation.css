@@ -2,7 +2,7 @@
     gap: 1rem;
     width: 10rem;
     display: flex;
-    padding: 2rem 0rem;
+    padding: 1rem 0rem;
     border-radius: 1rem;
     align-items: center;
     flex-direction: column;
@@ -23,18 +23,36 @@
     word-break: break-word;    
 }
 
-@media (max-width:1124px) {
-    .card-information {
-        width: 8rem;
-    }
-}
-
-@media (max-width:1000px) {
+@media (max-width:1200px) {
     .card-information img {
         width: 4rem;
     }
+}
 
-    .card-information p { 
+@media (max-width:900px) {
+    .card-information {
+        width: 8rem;
+    }
+
+    .card-information img {
+        width: 2.5rem;
+    }
+
+    .card-information p {
         font-size: medium;
+    }
+}
+
+@media (max-width:670px) {
+    .card-information {
+        width: 5rem;
+    }
+
+    .card-information img {
+        width: 1.5rem;
+    }
+
+    .card-information p {
+        font-size: small;
     }
 }
