@@ -3,7 +3,7 @@ import {products} from '../data/Products.js';
 
 export const getProductsByType = (type) => {
     try {
-        const response = products.find(product => product.type == type);
+        const response = products.filter(product => product.type == type);
 
         if(response.length === 0) {
             throw new Error('Could not load products')
@@ -13,6 +13,22 @@ export const getProductsByType = (type) => {
     }
     catch(error) {
         console.error("Error getProductsByType:", error);
+        return null;
+    }
+}
+
+export const getTypesProducts = () => {
+    try {
+        const response = [...new Set(products.map(p => p.type))];
+        
+        if(response.length === 0) {
+            throw new Error('Could not load types of products')
+        }
+
+        return response;
+    }
+    catch(error) {
+        console.error("Error getTypesProducts:", error);
         return null;
     }
 }
