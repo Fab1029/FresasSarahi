@@ -32,3 +32,29 @@
     font-size: large;
 }
 
+@media (max-width:900px) {
+    .shop-banner-info-container h1 {
+        font-size: 5rem;
+    }
+
+    .shop-banner-info-container p {
+        width: 50%;
+        font-size: medium;
+    }
+}
+
+@media (max-width:500px) {
+    .shop-banner-container {
+        height: 40vh;
+        padding: 3rem 1rem;
+    }
+    
+    .shop-banner-info-container h1 {
+        font-size: 3rem;
+    }
+
+    .shop-banner-info-container p {
+        width: 80%;
+        font-size: small;
+    }
+}
