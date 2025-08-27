@@ -21,3 +21,33 @@
     flex: 2;
     border-radius: 2rem;
 }
+
+@media (max-width:1024px) {
+    .information-banner-container {
+        height: 50vh;
+    }
+}
+
+@media (max-width:800px) {
+    .information-banner-container {
+        height: 40vh;
+    }
+}
+
+@media (max-width:550px) {
+    .information-banner-container {
+        height: 45vh;
+        flex-direction: column;
+        background-color: transparent;
+    }
+
+    .information-banner-cards {
+        order: 2;
+        flex-direction: row;
+    }
+
+    .information-banner-video {
+        order: 1;
+        padding: 0.5rem;
+    }
+}

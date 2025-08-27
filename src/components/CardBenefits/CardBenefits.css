@@ -6,8 +6,8 @@
     overflow: hidden;
     position: relative;
     align-items: center;
-    justify-content: center;
     border-radius: 1rem;
+    justify-content: center;
 }
 
 .card-benefits img {
@@ -33,4 +33,20 @@
     font-size: 2rem;
     line-height: 1.2;
     white-space: pre-line;
+}
+
+@media (max-width:800px) {
+    .card-benefits h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width:550px) {
+    .card-benefits h1 {
+        font-size: 0.7rem;
+    }
+
+    .card-benefits-overlay {
+        display: none;
+    }
 }
