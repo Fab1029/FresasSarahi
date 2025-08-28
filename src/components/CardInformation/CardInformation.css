@@ -43,7 +43,7 @@
     }
 }
 
-@media (max-width:670px) {
+@media (max-width:800px) {
     .card-information {
         width: 5rem;
     }

@@ -15,7 +15,6 @@ const Shop = () => {
   useEffect(() => {
     const fetchProducts = () => {
         const data = getProductsByType(selectType);
-        console.log(data);
         setProducts(data);
     };
     
