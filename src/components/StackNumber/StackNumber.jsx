@@ -19,9 +19,17 @@ const StackNumber = () => {
 
   return (
     <div className='stack-number-container'>
-        <img src={minusIcon} alt='minus-icon' loading='lazy' onClick={handleMinus}/>
+        <button onClick={handleMinus}>
+          <img src={minusIcon} alt='minus-icon' loading='lazy'/>
+        </button>
+        
         <p>{count}</p>
-        <img src={plusIcon} alt='minus-icon' loading='lazy' onClick={handlePlus}/>
+        
+        <button onClick={handlePlus}>
+
+          <img src={plusIcon} alt='minus-icon' loading='lazy'/>
+        </button>
+        
     </div>
   )
 }

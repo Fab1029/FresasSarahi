@@ -18,8 +18,15 @@ p, li, button {
 
 button {
   border: none;
+  outline: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 li {
   list-style: none;
+}
+
+button:focus {
+  outline: none;
 }

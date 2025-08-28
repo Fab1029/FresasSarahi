@@ -23,9 +23,9 @@ const Footer = () => {
         <div className='center-footer-container'>
           <div className='footer-info-container'>
             <h1>Categorías</h1>
-            <p className='footer-link' onClick={() => navigate('/')}>Inicio</p>
-            <p className='footer-link'>Tienda</p>
-            <p className='footer-link'>Acerca de nosotros</p>
+            <button className='footer-link' onClick={() => navigate('/')}>Inicio</button>
+            <button className='footer-link' onClick={() => navigate('/shop')}>Tienda</button>
+            <button className='footer-link' onClick={() => navigate('/about-us')}>Acerca de nosotros</button>
           </div>
 
           <div className='footer-info-container'>

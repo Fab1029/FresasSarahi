@@ -45,6 +45,10 @@
     background-color: #BB1732;   
 }
 
+.menu-nav-bar-item {
+    color: black;
+}
+
 .menu-nav-bar-item.active {
     color: #BB1732
 }
