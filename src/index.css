@@ -19,6 +19,7 @@ p, li, button {
 button {
   border: none;
   outline: none;
+  cursor: pointer;
   background-color: transparent;
   -webkit-tap-highlight-color: transparent;
 }
