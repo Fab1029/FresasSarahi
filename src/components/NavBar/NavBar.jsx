@@ -34,11 +34,11 @@ const NavBar = () => {
     <nav className='navbar' ref={navRef} style={{backgroundColor: navBackground}}>
         <img src={logo} alt='logo' className='logo-nav-bar' loading='lazy'/>
         
-        <ul className='menu'>
-            <li key='Inicio' className={`menu-nav-bar-item ${isActive('/')}`} onClick={() => navigate('/')}>Inicio</li>
-            <li key='Tienda' className={`menu-nav-bar-item ${isActive('/shop')}`} onClick={() => navigate('/shop')}>Tienda</li>
-            <li key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('/about-us')}`} onClick={() => navigate('/about-us')}>Acerca de nosotros</li>
-        </ul>
+        <div className='menu'>
+            <button key='Inicio' className={`menu-nav-bar-item ${isActive('/')}`} onClick={() => navigate('/')}>Inicio</button>
+            <button key='Tienda' className={`menu-nav-bar-item ${isActive('/shop')}`} onClick={() => navigate('/shop')}>Tienda</button>
+            <button key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('/about-us')}`} onClick={() => navigate('/about-us')}>Acerca de nosotros</button>
+        </div>
 
         <button className='default-button'>
             Contactate con nosotros

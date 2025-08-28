@@ -29,9 +29,9 @@ const HomeBanner = () => {
             
 
             <div className="home-banner-info-cards-container">
-                <CardInformation image={organicIcon} information={'Productos\n100%\norgánicos'}/>
-                <CardInformation image={groupIcon} information={'Trabajan\n+20\nfamilias'}/>
-                <CardInformation image={sustainableIcon} information={'Productos\nsostenibles'}/>
+                <CardInformation image={organicIcon} information={'Productos\n100%\norgánicos'} color={'#BB1732'}/>
+                <CardInformation image={groupIcon} information={'Trabajan\n+20\nfamilias'} color={'#BB1732'}/>
+                <CardInformation image={sustainableIcon} information={'Productos\nsostenibles'} color={'#BB1732'}/>
             </div>
 
         </div>

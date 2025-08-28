@@ -27,11 +27,12 @@
     background-color: rgba(242, 242, 242, 0.7);
 }
 
-.menu li {
+.menu button {
     cursor: pointer;
     font-size: small;
     font-weight: bold;
     text-align: center;
+    background-color: transparent;
 }
 
 .default-button {
@@ -79,7 +80,7 @@
         width: 6rem;
     }
 
-    .menu li {
+    .menu button {
         font-size: 0.5rem;
     }
 
