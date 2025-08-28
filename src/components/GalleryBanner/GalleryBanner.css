@@ -33,28 +33,33 @@
 
 .gallery-info-container {
     width: 80vw;
-    height: 40%;
+    height: 35%;
     background-color: #BFC3B0;
 
-    left: -30%;
+    left: 50%;
     bottom: 2%;
-    z-index: -1;
+    transform: translateX(-50%);
     position: absolute;
+    z-index: -1;
 
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 
-.gallery-info-cards-container{
-    gap: 1rem;
+.gallery-info-cards-container {
     display: flex;
-    margin-right: 20%;
+    gap: 1rem;
+    align-items: center;
     justify-content: center;
+    width: auto; 
+    height: 100%;
+    margin: 0; 
 }
 
 .gallery-photos-container {
     height: 60%;
-    padding: 2rem;
+    padding: 1rem 3rem;
     position: relative;
 }
 
@@ -64,15 +69,17 @@
 
     gap: 0.5rem;
     display: flex;
+    transition: transform 0.3s ease-in-out;
 
 }
 
 .gallery-photos img {
-    flex: 1;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1rem;
-    width: calc(100% / 3 - 0.5rem); 
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  width: calc(100% / 3 - 0.5rem); 
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .arrows-container {
@@ -91,7 +98,7 @@
 
 .arrow-icon {
     display: flex;
-    margin: 0 2.5rem;
+    margin: 0 4rem;
     align-items: center;
     justify-content: center;
 
@@ -106,4 +113,45 @@
 
 .arrow-icon:hover {
     background-color: rgba(0,0,0,0.7);
+}
+
+@media (max-width:900px) {
+    .gallery-banner-container {
+        height: 40vh;
+    }
+}
+
+@media (max-width:500px) {
+    .gallery-banner-left-container img {
+        top: 3%;
+        left: 3%;
+    }
+    
+    .gallery-info-container {
+        height: 25%;
+        bottom: 4%;
+    }
+
+    .gallery-info-cards-container {
+        gap: 0.1rem;
+    }
+
+    .gallery-photos-container {
+        height: 70%;
+        padding: 0.1rem 0.5rem;
+    }
+
+    .gallery-photos {
+        gap: 0.3rem;
+    }
+
+    .arrows-container {
+        padding: 0 0.6rem;
+    }
+
+    .arrow-icon {
+        margin: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }
