@@ -3,7 +3,7 @@ import CardInformation from "../CardInformation/CardInformation"
 import organicIcon from '../../assets/CardInformation/organic.webp'
 import groupIcon from '../../assets/CardInformation/group.webp'
 import sustainableIcon from '../../assets/CardInformation/sustainable.webp'
-import strawberryBannerImage from '../../assets/HomeBanner/HeaderMainPage.webp'
+import strawberryBannerImage from '../../assets/Banner/HeaderMainPage.webp'
 import rightArrowIcon from '../../assets/Button/right-arrow.webp'
 
 const HomeBanner = () => {

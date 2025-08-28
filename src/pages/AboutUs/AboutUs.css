@@ -1,0 +1,7 @@
+.video-about-us-container {
+    width: 90vw;
+    height: 70vh;
+    overflow: hidden;
+    margin: 1rem auto;
+    border-radius: 1rem;
+}

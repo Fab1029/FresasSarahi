@@ -1,11 +1,11 @@
-.shop-banner-container {
+.main-banner-container {
     width: 100vw;
     height: 70vh;
     padding: 4rem 2rem;
     position: relative;
 }
 
-.shop-banner-container img {
+.main-banner-container img {
     inset: 0;
     width: 100%;
     height: 100%;
@@ -14,50 +14,50 @@
     position: absolute;
 }
 
-.shop-banner-info-container {
+.main-banner-info-container {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.shop-banner-info-container h1 {
+.main-banner-info-container h1 {
     color: white;
-    font-size: 8rem;
+    font-size: 6rem;
 }
 
-.shop-banner-info-container p {
-    width: 35%;
+.main-banner-info-container p {
+    width: 45%;
     text-align: left;
     font-size: 1.3rem;
 }
 
 @media (max-width:900px) {
-    .shop-banner-info-container h1 {
+    .main-banner-info-container h1 {
         font-size: 5rem;
     }
 
-    .shop-banner-info-container p {
+    .main-banner-info-container p {
         width: 50%;
         font-size: medium;
     }
 }
 
 @media (max-width:500px) {
-    .shop-banner-container {
+    .main-banner-container {
         height: 30vh;
         padding: 3rem 1rem;
     }
 
-    .shop-banner-info-container {
+    .main-banner-info-container {
         justify-content: flex-start;
     }
 
-    .shop-banner-info-container h1 {
+    .main-banner-info-container h1 {
         font-size: 3rem;
     }
 
-    .shop-banner-info-container p {
+    .main-banner-info-container p {
         display: none;
     }
 }
