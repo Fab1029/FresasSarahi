@@ -20,14 +20,35 @@ const StackNumber = () => {
   return (
     <div className='stack-number-container'>
         <button onClick={handleMinus}>
-          <img src={minusIcon} alt='minus-icon' loading='lazy'/>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="black" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round" 
+              role="img" aria-label="Menos">
+            <path d="M6 12h12"/>
+          </svg>
+
         </button>
         
         <p>{count}</p>
         
         <button onClick={handlePlus}>
+          
+          <svg xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="black" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            role="img" aria-label="Más">
+            <path d="M6 12h12M12 6v12"/>
+          </svg>
 
-          <img src={plusIcon} alt='minus-icon' loading='lazy'/>
         </button>
         
     </div>

@@ -16,10 +16,8 @@
     justify-content: center;
 }
 
-.stack-number-container button img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.stack-number-container button svg {
+    width: 1.5rem;
 }
 
 .stack-number-container p {
@@ -35,5 +33,9 @@
 
     .stack-number-container p {
         font-size: 0.8rem;
+    }
+
+    .stack-number-container button svg {
+        width: 1rem;
     }
 }
