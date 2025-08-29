@@ -6,6 +6,7 @@ import MainBanner from '../../components/MainBanner/MainBanner.jsx';
 import StackType from '../../components/StackType/StackType.jsx';
 import Product from '../../components/Product/Product.jsx';
 import shopBannerImg from '../../assets/Banner/shopBanner.webp'
+import Cart from '../../components/Cart/Cart.jsx';
 
 const Shop = () => {
   const [products, setProducts] = useState(null);
@@ -31,6 +32,7 @@ const Shop = () => {
           </header>
       
           <main>
+            <Cart/>
             <MainBanner image={shopBannerImg} title={'Tienda'} description={'Bienvenido a la tienda de Fresas Sarahí, donde la naturaleza se encuentra con la innovación. Aquí encontrarás productos 100% auténticos, cultivados con amor y respeto por la tierra. Descubre el sabor de lo natural y lleva a tu mesa lo mejor de nuestras fresas.'}/>
             
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

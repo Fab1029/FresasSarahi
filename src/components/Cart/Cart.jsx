@@ -58,7 +58,7 @@ const Cart = () => {
 
                     <div className='cart-container-header-container'>
                         <div style={{flex: 1}}/>
-                        <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}><h1>Artículos</h1></div>
+                        <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}><h1 style={{fontSize: '1.5rem'}}>Artículos</h1></div>
                         <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
                             <button className='close-button' onClick={() => setIsVisibleCartMaximize(!isVisibleCartMaximize)}>
                                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -346,20 +346,8 @@ const Cart = () => {
                     </div>
 
                     <div className='pay-button-container'>
-                        <button className='default-button default-button-icon pay-button-minimize pay-button-maximize' onClick={null}>
+                        <button className='pay-button-maximize' onClick={null}>
                             Pagar
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" 
-                                    viewBox="0 0 24 24" 
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    stroke-width="2" 
-                                    stroke-linecap="round" 
-                                    stroke-linejoin="round" 
-                                    role="img" aria-label="Flecha diagonal">
-                                    <path d="M7 17L17 7M17 7H8M17 7V16"/>
-                                </svg>
-                            </div>
                         </button>
                     </div>
                         

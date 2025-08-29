@@ -1,6 +1,6 @@
 .home-banner-container {
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     margin-top: 4rem;
 
     display: flex;
@@ -58,7 +58,7 @@
 
 .home-banner-right-container h1 {
     height: 100%;
-    font-size: 26vh;
+    font-size: 26dvh;
     color: #CF5C6F;
     margin-right: -2.5rem;
     writing-mode: sideways-lr; 
@@ -107,7 +107,7 @@
 
 @media (max-width:1024px) {
     .home-banner-container {
-        height: 80vh;
+        height: 80dvh;
     }
 
     .home-banner-left-container {
@@ -121,14 +121,14 @@
     }
 
     .home-banner-right-container h1 { 
-        font-size: 21vh;
+        font-size: 21dvh;
     }
 }
 
 
 @media (max-width:900px) {
     .home-banner-container {
-        height: 55vh;
+        height: 55dvh;
     }
 
     .home-banner-left-container h1 {
@@ -140,7 +140,7 @@
     }  
 
     .home-banner-right-container h1 {
-        font-size: 14.5vh;
+        font-size: 14.5dvh;
     }
 }
 
@@ -156,7 +156,7 @@
     }
 
     .home-banner-container {
-        height: 35vh;
+        height: 35dvh;
     }
 
     .button-buy-now, .home-banner-description  {
@@ -164,7 +164,7 @@
     }
 
     .home-banner-right-container h1 {
-        font-size: 9vh;
+        font-size: 9dvh;
         margin-right: -1.5rem;
     }
 

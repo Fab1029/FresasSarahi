@@ -1,6 +1,6 @@
 .gallery-banner-container {
-    width: 100vw;
-    height: 80vh;
+    width: 100dvw;
+    height: 80dvh;
     margin-top: 2rem;
 
     display: flex;
@@ -32,7 +32,7 @@
 }
 
 .gallery-info-container {
-    width: 80vw;
+    width: 80dvw;
     height: 35%;
     background-color: #BFC3B0;
 
@@ -117,7 +117,7 @@
 
 @media (max-width:900px) {
     .gallery-banner-container {
-        height: 40vh;
+        height: 40dvh;
     }
 }
 

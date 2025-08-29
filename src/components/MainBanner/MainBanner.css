@@ -1,6 +1,6 @@
 .main-banner-container {
-    width: 100vw;
-    height: 70vh;
+    width: 100dvw;
+    height: 70dvh;
     padding: 4rem 2rem;
     position: relative;
 }
@@ -45,7 +45,7 @@
 
 @media (max-width:500px) {
     .main-banner-container {
-        height: 30vh;
+        height: 30dvh;
         padding: 3rem 1rem;
     }
 

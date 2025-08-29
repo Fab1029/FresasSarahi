@@ -1,6 +1,6 @@
 .information-banner-container {
-    width: 100vw;
-    height: 70vh;
+    width: 100dvw;
+    height: 70dvh;
     display: flex;
     margin: 2rem 0rem;
     background-color: #BB1732;
@@ -24,19 +24,19 @@
 
 @media (max-width:1024px) {
     .information-banner-container {
-        height: 50vh;
+        height: 50dvh;
     }
 }
 
 @media (max-width:800px) {
     .information-banner-container {
-        height: 40vh;
+        height: 40dvh;
     }
 }
 
 @media (max-width:550px) {
     .information-banner-container {
-        height: 50vh;
+        height: 50dvh;
         flex-direction: column;
         background-color: transparent;
     }

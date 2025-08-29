@@ -1,6 +1,6 @@
 .video-about-us-container {
-    width: 90vw;
-    height: 70vh;
+    width: 90dvw;
+    height: 70dvh;
     overflow: hidden;
     margin: 1rem auto;
     border-radius: 1rem;
@@ -9,14 +9,14 @@
 
 @media (max-width:700px) {
     .video-about-us-container {
-        height: 60vh;
+        height: 60dvh;
     }
 }
 
 @media (max-width:500px) {
     .video-about-us-container {
-        width: 95vw;
-        height: 30vh;
+        width: 95dvw;
+        height: 30dvh;
         margin: 1rem auto;
     }
 }
