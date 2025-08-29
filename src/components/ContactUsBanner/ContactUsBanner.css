@@ -69,6 +69,10 @@
     transition: background-color 0.3s ease;
 }
 
+.contact-us-center-container button svg {
+    width: 2rem;
+}
+
 .contact-us-center-container button:hover {
     background-color: #5E6839;
 }
@@ -148,6 +152,10 @@
     .contact-us-center-container img {
         width: 1.5rem;
     }
+
+    .contact-us-center-container button svg {
+        width: 1.5rem;
+    }
 }
 
 @media (max-width:500px) {
@@ -179,5 +187,9 @@
 
     .contact-us-center-container img {
         width: 1rem;
+    }
+
+    .contact-us-center-container button svg {
+        width: 1.1rem;
     }
 }
