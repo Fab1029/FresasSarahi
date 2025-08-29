@@ -1,6 +1,5 @@
 import './ContactUsBanner.css'
 import logo from '../../assets/ContactUsBanner/Logo.webp'
-import rightArrowIcon from '../../assets/Button/right-arrow.webp'
 import strawberryImage from '../../assets/ContactUsBanner/strawberryFalling.webp'
 
 

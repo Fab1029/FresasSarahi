@@ -1,5 +1,4 @@
 import './ProductsBanner.css'
-import arrowUpIcon from '../../assets/Button/arrow-up.webp'
 import Product from "../Product/Product"
 import { useNavigate } from 'react-router-dom'
 

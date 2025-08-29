@@ -1,6 +1,4 @@
 import './StackNumber.css'
-import plusIcon from '../../assets/StackNumber/plus.webp'
-import minusIcon from '../../assets/StackNumber/minus.webp'
 import { useState } from 'react'
 
 

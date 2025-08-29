@@ -1,5 +1,4 @@
 import './Product.css'
-import carIcon from '../../assets/Cart/cart.webp'
 import StackNumber from '../StackNumber/StackNumber'
 
 const Product = ({product}) => {
