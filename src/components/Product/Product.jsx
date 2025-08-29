@@ -24,7 +24,6 @@ const Product = ({product}) => {
 
         <button className='default-button button-add-to-cart'>
             Agregar al carrito
-            {/*<img src={carIcon} alt='car-icon' loading='lazy'/>*/}
             <svg xmlns="http://www.w3.org/2000/svg" 
                 viewBox="0 0 24 24" 
                 fill="currentColor" 

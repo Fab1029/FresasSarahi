@@ -6,6 +6,7 @@ import ContactUsBanner from '../../components/ContactUsBanner/ContactUsBanner'
 import InformationBanner from '../../components/InformationBanner/InformationBanner'
 import {getProducts} from '../../services/Products.js'
 import ProductsBanner from '../../components/ProductsBanner/ProductsBanner.jsx'
+import Cart from '../../components/Cart/Cart.jsx'
 
 const Home = () => {
   const [products, setProducts] = useState(null);
@@ -22,7 +23,7 @@ const Home = () => {
   }, []); 
 
   return (
-    <div style={{overflow: 'hidden'}}>
+    <div style={{overflow: 'hidden', position: 'relative'}}>
       {products ? (
         <>
           <header className='header-home-page'>
@@ -30,6 +31,7 @@ const Home = () => {
           </header>
               
           <main>
+            <Cart/>
             <HomeBanner/>
             <InformationBanner/>
             <ProductsBanner products={products}/> 
