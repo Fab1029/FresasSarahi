@@ -11,6 +11,10 @@
     justify-content: center;
 }
 
+.button-see-more svg {
+    width: 1.6rem;
+}
+
 @media (max-width:1024px) {
     .products-banner {
         grid-template-columns: repeat(3, 1fr);
@@ -24,11 +28,16 @@
         padding: 0.5rem 1rem;
     }
 
-    .button-see-more {
-        font-size: 0.6rem;
+    .see-more-container {
+        margin: 0.8rem 0;
     }
 
-    .button-see-more img {
-        width: 1rem;
+    .button-see-more {
+        display: flex;
+        font-size: 0.6rem;
+    }
+    
+    .button-see-more svg {
+        width: 0.9rem;
     }
 }

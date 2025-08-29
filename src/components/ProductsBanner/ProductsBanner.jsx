@@ -20,7 +20,16 @@ const ProductsBanner = ({products}) => {
             <button className="default-button default-button-icon button-see-more" onClick={() => navigate('/shop')}>
                 Ver más
                 <div>
-                    <img src={arrowUpIcon}/>
+                    <svg xmlns="http://www.w3.org/2000/svg" 
+                        viewBox="0 0 24 24" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        stroke-width="2" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        role="img" aria-label="Flecha diagonal">
+                        <path d="M7 17L17 7M17 7H8M17 7V16"/>
+                    </svg>
                 </div>
             </button>
         </div>

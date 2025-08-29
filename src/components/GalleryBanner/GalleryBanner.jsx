@@ -12,7 +12,6 @@ const photos = Object.values(images).map((img) => img.default);
 const GalleryBanner = () => {
   const visibleCount = 3;
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visiblePhotos = photos.slice(currentIndex, currentIndex + visibleCount);
   
   const handlePrev = () => {
     setCurrentIndex(prev => Math.max(prev - 1, 0));
@@ -35,13 +34,13 @@ const GalleryBanner = () => {
 
                 <div className='arrows-container'>
 
-                    <button className='arrow-icon' onClick={handlePrev}>
+                    <button className='arrow-icon' onClick={handlePrev} style={{visibility: currentIndex === 0 ? 'hidden' : 'inherit'}}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" width="2rem" height="2rem">
                             <path d="M16 4l-8 8 8 8" stroke="#ffffff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                     </button>
                     
-                    <button className='arrow-icon' onClick={handleNext}>
+                    <button className='arrow-icon' onClick={handleNext} style={{visibility: currentIndex === photos.length - 3 ? 'hidden' : 'inherit'}}>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" width="2rem" height="2rem">
                             <path d="M8 4l8 8-8 8" stroke="#ffffff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
