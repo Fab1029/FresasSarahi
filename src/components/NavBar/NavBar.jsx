@@ -36,9 +36,9 @@ const NavBar = () => {
         <img src={logo} alt='logo' className='logo-nav-bar' loading='lazy' onClick={() => navigate('/')}/>
         
         <div className='menu'>
-            <motion.button key='Inicio' className={`menu-nav-bar-item ${isActive('/')}`} onClick={() => navigate('/')} whileTap={{scale: 0.5}}>Inicio</motion.button>
-            <motion.button key='Tienda' className={`menu-nav-bar-item ${isActive('/shop')}`} onClick={() => navigate('/shop')} whileTap={{scale: 0.5}}>Tienda</motion.button>
-            <motion.button key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('/about-us')}`} onClick={() => navigate('/about-us')} whileTap={{scale: 0.5}}> Acerca de nosotros</motion.button>
+            <motion.button key='Inicio' className={`menu-nav-bar-item ${isActive('/')}`} whileTap={{scale: 0.8}} onClick={() => navigate('/')}>Inicio</motion.button>
+            <motion.button key='Tienda' className={`menu-nav-bar-item ${isActive('/shop')}`} whileTap={{scale: 0.8}} onClick={() => navigate('/shop')}>Tienda</motion.button>
+            <motion.button key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('/about-us')}`} whileTap={{scale: 0.8}} onClick={() => navigate('/about-us')}> Acerca de nosotros</motion.button>
         </div>
 
         <motion.button 
@@ -54,6 +54,8 @@ const NavBar = () => {
             repeatDelay: 10,
             ease: 'easeInOut'
           }}
+
+          whileTap={{scale: 0.8}}
         >
             Contactate con nosotros
         </motion.button>
