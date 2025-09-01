@@ -50,7 +50,7 @@ const ContactUsBanner = () => {
               whileInView="visible"
             >
               {'¿Antojado de fresas\nfrescas y orgánicas\ntodos los días?'.split('').map((char, index) => (
-                <motion.span variants={mainTitleLetterVariant}>
+                <motion.span variants={mainTitleLetterVariant} key={index}>
                   {char}
                 </motion.span>
               ))}

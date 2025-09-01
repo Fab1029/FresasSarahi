@@ -23,9 +23,9 @@ const StackNumber = () => {
               viewBox="0 0 24 24" 
               fill="none" 
               stroke="black" 
-              stroke-width="2" 
-              stroke-linecap="round" 
-              stroke-linejoin="round" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
               role="img" aria-label="Menos">
             <path d="M6 12h12"/>
           </svg>
@@ -40,9 +40,9 @@ const StackNumber = () => {
             viewBox="0 0 24 24" 
             fill="none" 
             stroke="black" 
-            stroke-width="2" 
-            stroke-linecap="round" 
-            stroke-linejoin="round" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round" 
             role="img" aria-label="Más">
             <path d="M6 12h12M12 6v12"/>
           </svg>
