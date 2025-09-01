@@ -7,6 +7,7 @@ import StackType from '../../components/StackType/StackType.jsx';
 import Product from '../../components/Product/Product.jsx';
 import shopBannerImg from '../../assets/Banner/shopBanner.webp'
 import Cart from '../../components/Cart/Cart.jsx';
+import { motion } from 'framer-motion'
 
 const Shop = () => {
   const [products, setProducts] = useState(null);
@@ -39,7 +40,10 @@ const Shop = () => {
                 <StackType types={productsTypes} setType={setSelectedType} selectedType={selectType}/>
             </div>
 
-            <div className="products-banner-container">
+            <motion.div className="products-banner-container"
+              initial = {{y: -50, opacity: 0}}
+              whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
+            >
 
               <div className='products-banner'>
                   {products.map((product, index) => (
@@ -47,7 +51,7 @@ const Shop = () => {
                   ))}
               </div>
                 
-            </div>
+            </motion.div>
             
           </main>
 

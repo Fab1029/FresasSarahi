@@ -77,9 +77,9 @@ const Footer = () => {
         <div className='center-footer-container'>
           <div className='footer-info-container'>
             <h1>Categorías</h1>
-            <button className='footer-link' onClick={() => navigate('/')}>Inicio</button>
-            <button className='footer-link' onClick={() => navigate('/shop')}>Tienda</button>
-            <button className='footer-link' onClick={() => navigate('/about-us')}>Acerca de nosotros</button>
+            <motion.button className='footer-link' onClick={() => navigate('/')} whileTap={{scale: 0.9}}>Inicio</motion.button>
+            <motion.button className='footer-link' onClick={() => navigate('/shop')} whileTap={{scale: 0.9}}>Tienda</motion.button>
+            <motion.button className='footer-link' onClick={() => navigate('/about-us')} whileTap={{scale: 0.9}}>Acerca de nosotros</motion.button>
           </div>
 
           <div className='footer-info-container'>
