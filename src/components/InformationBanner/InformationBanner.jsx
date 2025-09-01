@@ -14,14 +14,12 @@ const InformationBanner = () => {
       className='information-banner-container'
       initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeInOut' } }}
-      viewport={{ once: true, amount: 0.3 }}
     >
         <div className='information-banner-cards'>
             <motion.div 
               style={{width: '100%', height: '100%'}}
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
-              viewport={{ once: false, amount: 0.3 }}
               whileHover={{scale: 1.02, transition:{duration: 0.2, ease: 'easeInOut'}}}
               whileTap={{scale: 0.9, transition:{duration: 0.2, ease: 'easeInOut'}}}
             >
@@ -32,7 +30,6 @@ const InformationBanner = () => {
               style={{width: '100%', height: '100%'}}
               initial={{ x: 50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
-              viewport={{ once: false, amount: 0.3 }}
               whileHover={{scale: 1.02, transition:{duration: 0.2, ease: 'easeInOut'}}}
               whileTap={{scale: 0.9, transition:{duration: 0.2, ease: 'easeInOut'}}}
             >
@@ -43,7 +40,6 @@ const InformationBanner = () => {
               style={{width: '100%', height: '100%'}}
               initial={{ x: -50, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
-              viewport={{ once: false, amount: 0.3 }}
               whileHover={{scale: 1.02, transition:{duration: 0.2, ease: 'easeInOut'}}}
               whileTap={{scale: 0.9, transition:{duration: 0.2, ease: 'easeInOut'}}}
             >

@@ -5,29 +5,21 @@
     
     display: flex;
     align-items: center;
-    justify-content: center;       
+    justify-content: space-between;       
     background-color: #BFC3B0;
     overflow: hidden;             
 }
 
+
 .contact-us-left-container {
     height: 20rem;
-    object-fit: cover;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    object-fit: contain; 
+    flex-shrink: 0;      
 }
 
-.contact-us-right-container {
-    height: 12rem;
-    object-fit: cover;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
 
 .contact-us-center-container {
+    flex: 1; 
     gap: 1rem;
     display: flex;
     align-items: center;
@@ -66,20 +58,23 @@
     align-items: center;
     border: none;
     border-radius: 0.5rem;
-    transition: background-color 0.3s ease;
 }
 
 .contact-us-center-container button svg {
     width: 2rem;
 }
 
-.contact-us-center-container button:hover {
-    background-color: #5E6839;
-}
-
 .contact-us-center-container img {
     width: 2rem;
 }
+
+
+.contact-us-right-container {
+    height: 12rem;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
 
 /* RESPONSIVE */
 @media (max-width:1100px) {
