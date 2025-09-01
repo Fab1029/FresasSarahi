@@ -14,7 +14,7 @@ const InformationBanner = () => {
       className='information-banner-container'
       initial={{ opacity: 0, x: 100 }}
       whileInView={{ opacity: 1, x: 0, transition: { duration: 0.3, ease: 'easeInOut' } }}
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
         <div className='information-banner-cards'>
             <motion.div 

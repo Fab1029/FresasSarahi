@@ -1,6 +1,6 @@
 import './StackNumber.css'
 import { useState } from 'react'
-
+import { motion } from 'framer-motion'
 
 const StackNumber = () => {
   const [count, setCount] = useState(0);
@@ -17,7 +17,7 @@ const StackNumber = () => {
 
   return (
     <div className='stack-number-container'>
-        <button onClick={handleMinus}>
+        <motion.button onClick={handleMinus} whileTap={{scale: 0.8}}>
           
           <svg xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 24 24" 
@@ -30,11 +30,11 @@ const StackNumber = () => {
             <path d="M6 12h12"/>
           </svg>
 
-        </button>
+        </motion.button>
         
         <p>{count}</p>
         
-        <button onClick={handlePlus}>
+        <motion.button onClick={handlePlus} whileTap={{scale: 0.8}}>
           
           <svg xmlns="http://www.w3.org/2000/svg" 
             viewBox="0 0 24 24" 
@@ -47,7 +47,7 @@ const StackNumber = () => {
             <path d="M6 12h12M12 6v12"/>
           </svg>
 
-        </button>
+        </motion.button>
         
     </div>
   )

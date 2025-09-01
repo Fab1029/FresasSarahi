@@ -24,7 +24,7 @@ const titleVariant = {
 
 const letterVariant = {
     hidden: { opacity: 0, y: 20 },
-    visible: {opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut", repeat: Infinity, repeatDelay: 10}},
+    visible: {opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut", repeat: Infinity, repeatDelay: 8}},
 };
 
 const strawberryVariant = {
@@ -66,13 +66,16 @@ const HomeBanner = () => {
           transition: { duration: 0.3, ease: "easeInOut" }
         });
       });
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [arrowControls]);
 
   return (
-    <div className="home-banner-container">
+    <motion.div className="home-banner-container"
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
+    >
         <div className="home-banner-left-container">
             <motion.h1 
                 variants={mainTitleVariant} 
@@ -155,7 +158,7 @@ const HomeBanner = () => {
             animate = 'animate'
             
         />
-    </div>
+    </motion.div>
   )
 }
 

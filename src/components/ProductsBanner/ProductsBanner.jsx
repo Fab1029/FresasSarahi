@@ -1,13 +1,17 @@
 import './ProductsBanner.css'
 import Product from "../Product/Product"
 import { useNavigate } from 'react-router-dom'
-
+import {motion, scale} from 'framer-motion'
 
 const ProductsBanner = ({products}) => {
   const navigate = useNavigate();
 
   return (
-    <div className="products-banner-container">
+    <motion.div className="products-banner-container"
+        initial = {{y: -50, opacity: 0}}
+        whileInView={{ y: 0, opacity: 1, transition: { duration: 0.5, ease: 'easeInOut' } }}
+        viewport={{ once: true, amount: 0.3 }}
+    >
 
         <div className='products-banner'>
             {products.map((product, index) => (
@@ -16,7 +20,10 @@ const ProductsBanner = ({products}) => {
         </div>
         
         <div className='see-more-container'>
-            <button className="default-button default-button-icon button-see-more" onClick={() => navigate('/shop')}>
+            <motion.button className="default-button default-button-icon button-see-more" onClick={() => navigate('/shop')}
+                whileHover={{scale: 1.05, opacity: 0.8}}
+                whileTap={{scale: 0.8}}
+            >
                 Ver más
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" 
@@ -30,10 +37,10 @@ const ProductsBanner = ({products}) => {
                         <path d="M7 17L17 7M17 7H8M17 7V16"/>
                     </svg>
                 </div>
-            </button>
+            </motion.button>
         </div>
         
-    </div>
+    </motion.div>
   )
 }
 

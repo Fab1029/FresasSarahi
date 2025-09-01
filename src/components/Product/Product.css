@@ -6,6 +6,20 @@
     justify-content: space-between;
 }
 
+.product-container:hover, .product-container:active {
+    .product-image-container {
+        border: 0.3rem dashed #7F8661;
+    }
+
+    .product-weight-tag {
+        background-color: #7F8661;
+    }
+
+    .button-add-to-cart {
+        background-color: #7F8661;
+    }
+}
+
 .product-image-container {
     width: 10rem;
     height: 10rem;
@@ -13,6 +27,7 @@
 
     border-radius: 50%;
     border: 0.3rem dashed #BB1732;
+    transition: all 0.2s ease-in-out;
 
 }
 
@@ -45,6 +60,7 @@
     position: absolute;
     border-radius: 10rem;
     background-color: #BB1732;
+    transition: all 0.2s ease-in-out;
 }
 
 .product-weight-tag p {
@@ -58,6 +74,7 @@
     align-items: center;
     padding: 0.5rem 0.8rem;
     justify-content: space-around;
+    transition: all 0.2s ease-in-out;
 }
 
 .button-add-to-cart svg {
@@ -79,6 +96,12 @@
         height: 5rem;
         padding: 0.3rem;
         border: 0.2rem dashed #BB1732;
+    }
+    
+    .product-container:hover, .product-container:active {
+        .product-image-container {
+            border: 0.2rem dashed #7F8661;
+        }
     }
 
     .product-name-container h2 {
