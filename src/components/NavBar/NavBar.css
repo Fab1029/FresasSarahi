@@ -13,6 +13,7 @@
 
 .logo-nav-bar {
     width: 10rem;
+    cursor: pointer;
 }
 
 .menu {

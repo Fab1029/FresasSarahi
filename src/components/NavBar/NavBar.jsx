@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import './NavBar.css'
 import logo from '../../assets/NavBar/Logo.webp'
 import { useLocation, useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 const NavBar = () => {
   const navRef = useRef();  
@@ -32,17 +33,30 @@ const NavBar = () => {
 
   return (
     <nav className='navbar' ref={navRef} style={{backgroundColor: navBackground}}>
-        <img src={logo} alt='logo' className='logo-nav-bar' loading='lazy'/>
+        <img src={logo} alt='logo' className='logo-nav-bar' loading='lazy' onClick={() => navigate('/')}/>
         
         <div className='menu'>
-            <button key='Inicio' className={`menu-nav-bar-item ${isActive('/')}`} onClick={() => navigate('/')}>Inicio</button>
-            <button key='Tienda' className={`menu-nav-bar-item ${isActive('/shop')}`} onClick={() => navigate('/shop')}>Tienda</button>
-            <button key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('/about-us')}`} onClick={() => navigate('/about-us')}>Acerca de nosotros</button>
+            <motion.button key='Inicio' className={`menu-nav-bar-item ${isActive('/')}`} onClick={() => navigate('/')} whileTap={{scale: 0.5}}>Inicio</motion.button>
+            <motion.button key='Tienda' className={`menu-nav-bar-item ${isActive('/shop')}`} onClick={() => navigate('/shop')} whileTap={{scale: 0.5}}>Tienda</motion.button>
+            <motion.button key='Acerca de nosotros' className={`menu-nav-bar-item ${isActive('/about-us')}`} onClick={() => navigate('/about-us')} whileTap={{scale: 0.5}}> Acerca de nosotros</motion.button>
         </div>
 
-        <button className='default-button'>
+        <motion.button 
+          className='default-button'
+
+          animate = {{
+            scale: [1, 0.9, 1]
+          }}
+
+          transition={{
+            duration: 0.6,
+            repeat: Infinity,
+            repeatDelay: 10,
+            ease: 'easeInOut'
+          }}
+        >
             Contactate con nosotros
-        </button>
+        </motion.button>
 
     </nav>
   )
