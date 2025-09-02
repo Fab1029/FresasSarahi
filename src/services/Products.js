@@ -37,7 +37,7 @@ export const getProducts = () => {
     try {
         const response = products;
         
-        if(products.length === 0) {
+        if(response.length === 0) {
             throw new Error('Could not load products')
         }
 
@@ -45,6 +45,22 @@ export const getProducts = () => {
     }
     catch(error) {
         console.error("Error getProducts:", error);
+        return null;
+    }
+}
+
+export const getMainProducts = () => {
+    try {
+        const response = products.filter(product => product.mainProduct);
+        
+        if(response.length === 0) {
+            throw new Error('Could not load main products')
+        }
+
+        return response;
+    }
+    catch(error) {
+        console.error("Error getMainProducts:", error);
         return null;
     }
 }

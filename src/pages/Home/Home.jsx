@@ -4,7 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import HomeBanner from '../../components/HomeBanner/HomeBanner'
 import ContactUsBanner from '../../components/ContactUsBanner/ContactUsBanner'
 import InformationBanner from '../../components/InformationBanner/InformationBanner'
-import {getProducts} from '../../services/Products.js'
+import {getMainProducts} from '../../services/Products.js'
 import ProductsBanner from '../../components/ProductsBanner/ProductsBanner.jsx'
 import Cart from '../../components/Cart/Cart.jsx'
 
@@ -13,9 +13,8 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = () => {
-      const data = getProducts();
-      const shuffled = [...data].sort(() => 0.5 - Math.random());
-      setProducts(shuffled.slice(0, 8)); 
+      const data = getMainProducts();
+      setProducts(data); 
     };
 
     fetchProducts();

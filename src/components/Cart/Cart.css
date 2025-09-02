@@ -100,6 +100,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.close-button:hover {
+    scale: 1.05;
+    background-color: rgb(0, 0, 0);
+}
+
+.close-button:active {
+    scale: 0.8;
 }
 
 .close-button svg {
@@ -168,8 +179,26 @@
     position: absolute;
 }
 
-.product-detail-right-container button svg {
+.trash-button {
+    transition: all 0.3s ease-in-out;
+}
+
+.trash-button path {
+    transition: all 0.3s ease-in-out;
+}
+
+.trash-button svg {
     width: 1.5rem;
+}
+
+.trash-button:hover {
+    path {
+        stroke: #BB1732;
+    }
+}
+
+.trash-button:active {
+    scale: 0.8;
 }
 
 .pay-button-maximize {
@@ -177,6 +206,16 @@
     border-radius: 1rem;
     padding: 0.6rem 3rem;
     background-color: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+.pay-button-maximize:hover {
+    scale: 1.05;
+    background-color: rgb(0, 0, 0);
+}
+
+.pay-button-maximize:active {
+    scale: 0.8;
 }
 
 @media (max-width: 1200px) {

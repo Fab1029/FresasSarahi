@@ -41,7 +41,7 @@ const Cart = () => {
                 
                 onDragStart={() => setDragged(false)}
 
-                onDrag={(e, info) => {
+                onDrag={(_, info) => {
                     if (Math.abs(info.offset.x) > 2 || Math.abs(info.offset.y) > 2) {
                         setDragged(true);
                     }
@@ -136,7 +136,7 @@ const Cart = () => {
                             </div>
 
                             <div className='product-detail-right-container'>
-                                <button>
+                                <button className='trash-button'>
                                     <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
                                         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>

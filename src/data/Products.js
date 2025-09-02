@@ -5,6 +5,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'General',
+        mainProduct: true
     },
 
     {
@@ -13,6 +14,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'General',
+        mainProduct: false
     },
 
     {
@@ -21,6 +23,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'General',
+        mainProduct: true
     },
 
     {
@@ -29,6 +32,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'General',
+        mainProduct: false
     },
 
     {
@@ -37,6 +41,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'General',
+        mainProduct: false
     },
 
     {
@@ -45,6 +50,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'General',
+        mainProduct: true
     },
 
     {
@@ -53,6 +59,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'General',
+        mainProduct: true
     },
 
     {
@@ -61,6 +68,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: false
     },
 
     {
@@ -69,6 +77,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: true
     },
 
     {
@@ -77,6 +86,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: true
     },
 
     {
@@ -85,6 +95,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: false
     },
 
     {
@@ -93,6 +104,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: false
     },
 
     {
@@ -101,6 +113,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: true
     },
 
     {
@@ -109,6 +122,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: false
     },
 
     {
@@ -117,6 +131,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: false
     },
 
     {
@@ -125,6 +140,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: false
     },
 
     {
@@ -133,6 +149,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Especial',
+        mainProduct: false
     },
 
     {
@@ -141,6 +158,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Temporada',
+        mainProduct: false
     },
 
     {
@@ -149,6 +167,7 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Temporada',
+        mainProduct: false
     },
 
     {
@@ -157,5 +176,6 @@ export const products = [
         weight: '1 kg',
         image: `/mermelada.webp`,
         type: 'Temporada',
+        mainProduct: true
     }
 ]
