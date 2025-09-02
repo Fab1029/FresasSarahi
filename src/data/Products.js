@@ -117,7 +117,7 @@ export const products = [
     },
 
     {
-        name: 'Dulce de Temporada',
+        name: 'Dulce Temporada',
         price: '2.20',
         weight: '400 g',
         image: `/mermelada.webp`,
@@ -144,7 +144,7 @@ export const products = [
     },
 
     {
-        name: 'Mermelada Tradicional',
+        name: 'Tradicional Fresa',
         price: '1.90',
         weight: '500 g',
         image: `/mermelada.webp`,
@@ -162,7 +162,7 @@ export const products = [
     },
 
     {
-        name: 'Dulce de Fresa Light',
+        name: 'Fresa Light',
         price: '1.70',
         weight: '400 g',
         image: `/mermelada.webp`,

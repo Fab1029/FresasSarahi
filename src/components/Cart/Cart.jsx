@@ -2,18 +2,14 @@ import { useEffect, useState } from 'react'
 import './Cart.css'
 import StackNumber from '../StackNumber/StackNumber';
 import { motion, AnimatePresence } from 'framer-motion'
+import { getLinkMessage } from '../../services/WhatsApp.js'
 
-const Cart = ({cartItems, updateCart, deleteItemCart}) => {
-  const [dragged, setDragged] = useState(false);  
-  const [isMobile, setIsMobile] = useState(false);
-  const [cartPosition, setCartPosition] = useState({x:0, y: 0});
+const Cart = ({cartItems, updateCart, deleteItemCart, deleteItemsCart}) => {
+  const [dragged, setDragged] = useState(false); 
+  const [cartPosition, setCartPosition] = useState({x:0, y: 0}); 
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
   const [isVisibleCartMaximize, setIsVisibleCartMaximize] = useState(false);
-  
-  useEffect(() => {
-    // detectar si es móvil
-    const checkMobile = () => setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
-    checkMobile();
-  }, []);
+
 
   useEffect(() => {
     if (isVisibleCartMaximize) {
@@ -27,6 +23,14 @@ const Cart = ({cartItems, updateCart, deleteItemCart}) => {
     };
     
   }, [isVisibleCartMaximize]);
+
+  const handlePayButton = () => {
+    if(cartItems.reduce((acc, item) => acc + item.quantity, 0) > 0){
+        window.open(getLinkMessage('SHOP', cartItems), "_blank", "noopener,noreferrer");
+        deleteItemsCart();
+    }
+        
+  };
 
   return (
     <div className='cart-container'>
@@ -66,17 +70,20 @@ const Cart = ({cartItems, updateCart, deleteItemCart}) => {
                         setIsVisibleCartMaximize(!isVisibleCartMaximize)}
                     }
                 >
-                    <svg xmlns="http://www.w3.org/2000/svg" 
+                    <motion.svg xmlns="http://www.w3.org/2000/svg" 
+                        animate = {{scale: [1, 0.8, 1]}}
+                        transition={{duration:0.2, repeat: Infinity, ease: 'easeInOut', repeatDelay: 5}}
+
                         viewBox="0 0 24 24" 
                         fill="white" 
                         role="img" aria-label="Carrito de compras">
                         <path d="M2.08 2.75c.14-.39.57-.6.96-.46l.3.1c.62.22 1.14.41 1.55.62.44.22.82.5 1.1.92.28.42.39.88.44 1.38.02.23.03.48.03.79H17.13c1.69 0 3.21 0 3.65.58.44.58.27 1.45-.07 3.19l-.5 2.42c-.32 1.53-.48 2.28-1.03 2.73-.55.45-1.34.45-2.9.45h-5.3c-2.79 0-4.18 0-5.04-.92C5.06 13.55 5 12.58 5 9.64V7.04c0-.74 0-1.23-.04-1.62-.04-.36-.11-.54-.2-.67-.09-.13-.22-.25-.52-.4-.32-.16-.76-.32-1.43-.56l-.26-.09a.75.75 0 0 1-.47-.95ZM7.5 18a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm9 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"/>
-                    </svg>
+                    </motion.svg>
                     <p className='count-items-container'>
                         {cartItems.reduce((acc, item) => acc + item.quantity, 0)}
                     </p>
                 </button>
-                <button className='default-button default-button-icon pay-button-minimize' onClick={null}>
+                <button className='default-button default-button-icon pay-button-minimize' onClick={handlePayButton}>
                     Pagar
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" 
@@ -154,7 +161,7 @@ const Cart = ({cartItems, updateCart, deleteItemCart}) => {
                     </div>
 
                     <div className='pay-button-container'>
-                        <button className='pay-button-maximize' onClick={null}>
+                        <button className='pay-button-maximize' onClick={handlePayButton}>
                             Pagar
                         </button>
                     </div>

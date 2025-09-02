@@ -7,13 +7,14 @@ import StackType from '../../components/StackType/StackType.jsx';
 import Product from '../../components/Product/Product.jsx';
 import shopBannerImg from '../../assets/Banner/shopBanner.webp'
 import Cart from '../../components/Cart/Cart.jsx';
+import {useCart} from '../../services/Cart.js'
 import { motion } from 'framer-motion'
 
 const Shop = () => {
   const [products, setProducts] = useState(null);
   const [selectType, setSelectedType] = useState('General');
   const [productsTypes, setProductsTypes] = useState(getTypesProducts());
-  const [cartItems, setCartItems] = useState(sessionStorage.getItem('cartItems') ? JSON.parse(sessionStorage.getItem('cartItems')) : []);
+  const { cartItems, updateCart, deleteItemCart, deleteItemsCart } = useCart();
 
   useEffect(() => {
     const fetchProducts = () => {
@@ -25,28 +26,6 @@ const Shop = () => {
 
   }, [selectType]); 
 
-  const updateCart = (item) => {
-    let items = [...cartItems];
-    const itemIndex = items.findIndex((p) => p.name === item.name);
-
-    if (itemIndex >= 0) {
-      items[itemIndex] = item; 
-    } else {
-      items.push(item);
-    }
-
-    setCartItems(items);
-    sessionStorage.setItem("cartItems", JSON.stringify(items)); 
-  };
-
-  const deleteItemCart = (item) => {
-    let items = [];
-    items = cartItems.filter((p) => p.name !== item.name);
-    
-    setCartItems(items);
-    sessionStorage.setItem("cartItems", JSON.stringify(items)); 
-  };
-
   return (
     <div style={{overflow: 'hidden'}}>
       {products ? (
@@ -56,7 +35,7 @@ const Shop = () => {
           </header>
       
           <main>
-            <Cart cartItems={cartItems} updateCart={updateCart} deleteItemCart={deleteItemCart}/>
+            <Cart cartItems={cartItems} updateCart={updateCart} deleteItemCart={deleteItemCart} deleteItemsCart={deleteItemsCart}/>
             <MainBanner image={shopBannerImg} title={'Tienda'} description={'Bienvenido a la tienda de Fresas Sarahí, donde la naturaleza se encuentra con la innovación. Aquí encontrarás productos 100% auténticos, cultivados con amor y respeto por la tierra. Descubre el sabor de lo natural y lleva a tu mesa lo mejor de nuestras fresas.'}/>
             
             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>

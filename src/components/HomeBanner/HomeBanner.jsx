@@ -6,6 +6,7 @@ import sustainableIcon from '../../assets/CardInformation/sustainable.webp'
 import strawberryBannerImage from '../../assets/Banner/HeaderMainPage.webp'
 import { motion, scale, useAnimation } from 'framer-motion'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const mainTitleVariant = {
   hidden: {},
@@ -53,8 +54,9 @@ const cardVariant = {
 };
 
 const HomeBanner = () => {
+  const navigate = useNavigate();
   const arrowControls = useAnimation();
-
+  
   useEffect(() => {
     const interval = setInterval(() => {
       arrowControls.start({
@@ -96,6 +98,7 @@ const HomeBanner = () => {
                 </motion.p>
 
                 <motion.button className="default-button default-button-icon button-buy-now" 
+                    onClick={() => navigate('/shop')}
                     whileHover={{ scale: 1.05, opacity: 0.8 }}
                     whileTap={{ scale: 0.8 }}
                     onHoverStart={() => arrowControls.start({ x: 4, transition: { duration: 0.3, ease: "easeInOut" }})}

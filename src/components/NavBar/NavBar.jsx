@@ -3,6 +3,7 @@ import './NavBar.css'
 import logo from '../../assets/NavBar/Logo.webp'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion'
+import { getLinkMessage } from '../../services/WhatsApp.js'
 
 const NavBar = () => {
   const navRef = useRef();  
@@ -42,6 +43,7 @@ const NavBar = () => {
         </div>
 
         <motion.button 
+          onClick={() => window.open(getLinkMessage(), "_blank", "noopener,noreferrer")}
           className='default-button'
 
           animate = {{

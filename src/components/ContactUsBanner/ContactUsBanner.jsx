@@ -1,6 +1,7 @@
 import './ContactUsBanner.css'
 import { motion } from 'framer-motion'
 import logo from '../../assets/ContactUsBanner/Logo.webp'
+import { getLinkMessage } from '../../services/WhatsApp.js'
 import strawberryImage from '../../assets/ContactUsBanner/strawberryFalling.webp'
 
 const mainTitleVariant = {
@@ -56,6 +57,7 @@ const ContactUsBanner = () => {
               ))}
             </motion.h1>
             <motion.button
+              onClick={() => window.open(getLinkMessage('REGULAR'), "_blank", "noopener,noreferrer")}
               whileHover={{backgroundColor: '#5E6839', scale: 1.02, transition:{duration: 0.3, ease: 'easeInOut'}}}
               whileTap={{scale: 0.8}}
             >

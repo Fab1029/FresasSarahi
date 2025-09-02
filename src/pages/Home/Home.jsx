@@ -7,10 +7,11 @@ import InformationBanner from '../../components/InformationBanner/InformationBan
 import {getMainProducts} from '../../services/Products.js'
 import ProductsBanner from '../../components/ProductsBanner/ProductsBanner.jsx'
 import Cart from '../../components/Cart/Cart.jsx'
+import {useCart} from '../../services/Cart.js'
 
 const Home = () => {
   const [products, setProducts] = useState(null);
-  const [cartItems, setCartItems] = useState(sessionStorage.getItem('cartItems') ? JSON.parse(sessionStorage.getItem('cartItems')) : []);
+  const { cartItems, updateCart, deleteItemCart, deleteItemsCart } = useCart();
 
   useEffect(() => {
     const fetchProducts = () => {
@@ -22,28 +23,6 @@ const Home = () => {
   
   }, []); 
 
-  const updateCart = (item) => {
-    let items = [...cartItems];
-    const itemIndex = items.findIndex((p) => p.name === item.name);
-
-    if (itemIndex >= 0) {
-      items[itemIndex] = item; 
-    } else {
-      items.push(item);
-    }
-
-    setCartItems(items);
-    sessionStorage.setItem("cartItems", JSON.stringify(items)); 
-  };
-
-  const deleteItemCart = (item) => {
-    let items = [];
-    items = cartItems.filter((p) => p.name !== item.name);
-    
-    setCartItems(items);
-    sessionStorage.setItem("cartItems", JSON.stringify(items)); 
-  };
-
   return (
     <div style={{overflow: 'hidden', position: 'relative'}}>
       {products ? (
@@ -53,7 +32,7 @@ const Home = () => {
           </header>
               
           <main>
-            <Cart cartItems={cartItems} updateCart={updateCart} deleteItemCart={deleteItemCart}/>
+            <Cart cartItems={cartItems} updateCart={updateCart} deleteItemCart={deleteItemCart} deleteItemsCart={deleteItemsCart}/>
             <HomeBanner/>
             <InformationBanner/>
             <ProductsBanner products={products} callFunction={updateCart}/> 

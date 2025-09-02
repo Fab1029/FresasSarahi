@@ -2,6 +2,7 @@ import './Footer.css'
 import logo from '../../assets/Footer/Logo.webp'
 import { useNavigate } from 'react-router-dom'
 import { motion } from "framer-motion";
+import { getLinkMessage } from '../../services/WhatsApp.js'
 
 const containerVariants = {
   animate: {
@@ -26,7 +27,6 @@ const iconVariants = {
 
 const Footer = () => {
   const navigate = useNavigate();
-
   return (
     <div className='footer'>
         {/* Izquierda */}
@@ -62,6 +62,7 @@ const Footer = () => {
 
             <motion.button
               variants={iconVariants}
+              onClick={() => window.open(getLinkMessage(), "_blank", "noopener,noreferrer")}
             >
               <svg viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#000000" className='social-icon'>
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
