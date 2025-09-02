@@ -1,9 +1,9 @@
 import './ProductsBanner.css'
 import Product from "../Product/Product"
 import { useNavigate } from 'react-router-dom'
-import {motion, scale} from 'framer-motion'
+import { motion } from 'framer-motion'
 
-const ProductsBanner = ({products}) => {
+const ProductsBanner = ({products, callFunction}) => {
   const navigate = useNavigate();
 
   return (
@@ -14,7 +14,7 @@ const ProductsBanner = ({products}) => {
 
         <div className='products-banner'>
             {products.map((product, index) => (
-                <Product product={product} key={index}/>
+                <Product product={product} callFunction={callFunction} key={index}/>
             ))}
         </div>
         

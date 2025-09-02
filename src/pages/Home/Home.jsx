@@ -10,6 +10,7 @@ import Cart from '../../components/Cart/Cart.jsx'
 
 const Home = () => {
   const [products, setProducts] = useState(null);
+  const [cartItems, setCartItems] = useState(sessionStorage.getItem('cartItems') ? JSON.parse(sessionStorage.getItem('cartItems')) : []);
 
   useEffect(() => {
     const fetchProducts = () => {
@@ -21,6 +22,28 @@ const Home = () => {
   
   }, []); 
 
+  const updateCart = (item) => {
+    let items = [...cartItems];
+    const itemIndex = items.findIndex((p) => p.name === item.name);
+
+    if (itemIndex >= 0) {
+      items[itemIndex] = item; 
+    } else {
+      items.push(item);
+    }
+
+    setCartItems(items);
+    sessionStorage.setItem("cartItems", JSON.stringify(items)); 
+  };
+
+  const deleteItemCart = (item) => {
+    let items = [];
+    items = cartItems.filter((p) => p.name !== item.name);
+    
+    setCartItems(items);
+    sessionStorage.setItem("cartItems", JSON.stringify(items)); 
+  };
+
   return (
     <div style={{overflow: 'hidden', position: 'relative'}}>
       {products ? (
@@ -30,10 +53,10 @@ const Home = () => {
           </header>
               
           <main>
-            <Cart/>
+            <Cart cartItems={cartItems} updateCart={updateCart} deleteItemCart={deleteItemCart}/>
             <HomeBanner/>
             <InformationBanner/>
-            <ProductsBanner products={products}/> 
+            <ProductsBanner products={products} callFunction={updateCart}/> 
             <ContactUsBanner/>
           </main>
 

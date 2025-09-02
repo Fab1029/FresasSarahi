@@ -1,18 +1,34 @@
 import './Product.css'
 import StackNumber from '../StackNumber/StackNumber'
 import { motion, useAnimation } from 'framer-motion'
+import { useState } from 'react';
 
 
 
-const Product = ({product}) => {
+const Product = ({product, callFunction}) => {
   const cartControls = useAnimation();
+  const [quantity, setQuantity] = useState(0);
 
   const handleAddToCart = () => {
+    // Quantity 0
+    if (quantity === 0) return;
+
+    // Animacion
     cartControls.start({
         rotate: [0, -10, 5, 0], 
         x: [0, 0, 15, 0],        
         transition: { duration: 0.5, ease: 'easeInOut', times: [0, 0.1, 0.8, 1]}
     });
+
+    callFunction({
+        name: product.name,
+        weight: product.weight,
+        price: product.price,
+        quantity: quantity
+    });
+    
+    // Limpiamos valores
+    setQuantity(0);
   };
 
   return (
@@ -31,7 +47,7 @@ const Product = ({product}) => {
 
             <p className='product-price'>${product.price}</p>
             
-            <StackNumber/>
+            <StackNumber quantity={quantity} callFunction={setQuantity}/>
             
         </div>
 

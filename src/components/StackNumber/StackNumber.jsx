@@ -1,18 +1,17 @@
+import { useState } from 'react';
 import './StackNumber.css'
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 
-const StackNumber = () => {
-  const [count, setCount] = useState(0);
-  
+const StackNumber = ({quantity, callFunction}) => {
+
   const handleMinus = () => {
-    if(count > 0) {
-      setCount(count - 1);
+    if(quantity > 0) {
+      callFunction(quantity - 1);
     }
   };
 
   const handlePlus = () => {
-    setCount(count + 1);
+    callFunction(quantity + 1);
   };
 
   return (
@@ -32,7 +31,7 @@ const StackNumber = () => {
 
         </motion.button>
         
-        <p>{count}</p>
+        <p>{quantity}</p>
         
         <motion.button onClick={handlePlus} whileTap={{scale: 0.8}}>
           
