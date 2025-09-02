@@ -6,8 +6,8 @@ const VideoPlayer = ({ video, loopMode = false }) => {
   const hideTimeout = useRef(null);
   const [isMuted, setIsMuted] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [showControls, setShowControls] = useState(loopMode ? false : true); // 👈 visible al inicio si no es loop
   const [isMobile, setIsMobile] = useState(false);
+  const [showControls, setShowControls] = useState(loopMode ? false : true); 
 
   useEffect(() => {
     // detectar si es móvil

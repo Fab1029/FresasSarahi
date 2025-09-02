@@ -4,8 +4,16 @@ import StackNumber from '../StackNumber/StackNumber';
 import { motion, AnimatePresence } from 'framer-motion'
 
 const Cart = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const [dragged, setDragged] = useState(false);
   const [cartPosition, setCartPosition] = useState({x:0, y: 0});
   const [isVisibleCartMaximize, setIsVisibleCartMaximize] = useState(false);
+  
+  useEffect(() => {
+    // detectar si es móvil
+    const checkMobile = () => setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
+    checkMobile();
+  }, []);
 
   useEffect(() => {
     if (isVisibleCartMaximize) {
@@ -30,6 +38,15 @@ const Cart = () => {
                 dragConstraints={{ 
                     top: -10, left: -window.innerWidth + 150 , right: 0, bottom: document.documentElement.scrollHeight * 1.5
                 }}
+                
+                onDragStart={() => setDragged(false)}
+
+                onDrag={(e, info) => {
+                    if (Math.abs(info.offset.x) > 2 || Math.abs(info.offset.y) > 2) {
+                        setDragged(true);
+                    }
+                }}
+
                 onDragEnd={(_, info) => {
                     setCartPosition(prev => ({
                         x: prev.x + info.offset.x,
@@ -39,7 +56,16 @@ const Cart = () => {
 
                 style={{ x: cartPosition.x, y: cartPosition.y }}
             >
-                <button className='cart-items-button' onClick={() => setIsVisibleCartMaximize(!isVisibleCartMaximize)}>
+                <button className='cart-items-button' 
+                    onClick={() => {
+                        if (!isMobile && dragged) {
+                            setDragged(false);
+                            return;
+                        };
+
+                        setIsVisibleCartMaximize(!isVisibleCartMaximize)}
+                    }
+                >
                     <svg xmlns="http://www.w3.org/2000/svg" 
                         viewBox="0 0 24 24" 
                         fill="white" 
