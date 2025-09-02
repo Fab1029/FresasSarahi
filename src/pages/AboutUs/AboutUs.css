@@ -6,7 +6,6 @@
     border-radius: 1rem;
 }
 
-
 @media (max-width:700px) {
     .video-about-us-container {
         height: 60dvh;
