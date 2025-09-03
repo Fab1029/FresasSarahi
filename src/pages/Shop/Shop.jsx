@@ -9,8 +9,10 @@ import shopBannerImg from '../../assets/Banner/shopBanner.webp'
 import Cart from '../../components/Cart/Cart.jsx';
 import {useCart} from '../../services/Cart.js'
 import { motion } from 'framer-motion'
+import Loading from '../../components/Loading/Loading.jsx';
 
 const Shop = () => {
+  const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState(null);
   const [selectType, setSelectedType] = useState('General');
   const [productsTypes, setProductsTypes] = useState(getTypesProducts());
@@ -26,9 +28,19 @@ const Shop = () => {
 
   }, [selectType]); 
 
+  useEffect(() => {
+    if (products) {
+      const timeout = setTimeout(() => {
+        setLoading(false);
+      }, 1500); 
+
+      return () => clearTimeout(timeout);
+    }
+  }, [products]);
+
   return (
     <div style={{overflow: 'hidden'}}>
-      {products ? (
+      {loading ? <Loading/> :(
         <>
           <header className='header-shop-page'>
             <NavBar/>
@@ -63,8 +75,6 @@ const Shop = () => {
 
         </>
       )
-      :
-        <></>
       }
     </div>
   )
